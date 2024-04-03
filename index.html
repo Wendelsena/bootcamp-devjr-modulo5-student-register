@@ -21,30 +21,30 @@
 
         <div class="row">
             <div class="col-md-10 offset-1">
-                <form>
+                <form onsubmit="return false; save();" id="formRegister"> <!-- return false para não recarregar a pagina -->
                     <div class="row mb-3 mt-3">
                         <label for="name" class="col-sm-1 col-form-label text-end"><img src="assets/do-utilizador.png" width="30" alt="people"></label>
                         <div class="col-sm-10">
-                            <input id="name" type="text" class="form-control" id="inputName" placeholder="Name: ">
+                            <input id="name" type="text" class="form-control" id="inputName" placeholder="Name:" required> <!-- required ´para tornar obrigatório -->
                         </div>
                     </div>
                     <div class="row mb-3 mt-3">
                         <label for="email" class="col-sm-1 col-form-label text-end"><img src="assets/e-mail.png" width="30" alt="email"></label>
                         <div class="col-sm-4">
-                            <input id="email" type="email" class="form-control" id="inputEmail" placeholder="Email:">
+                            <input id="email" type="email" class="form-control" id="inputEmail" placeholder="Email:" required>
                         </div>
             
                             <label for="phone" class="col-sm-2 col-form-label text-end"><img src="assets/telefone.png" width="30" alt="phone"></label>
                             <div class="col-sm-4">
-                                <input id="phone" type="text" class="form-control" placeholder="Phone number:">
+                                <input id="phone" type="text" class="form-control" id="inputPhoneNumber" placeholder="Phone number:" required>
                             </div>
                     </div>
                     <div class="row mb-3 mt-5">
                         <label for="category" class="col-sm-1 col-form-label text-end"><img src="assets/categoria.png" width="30" alt="category"></label>
                         <div class="col-sm-4">
-                            <select id="category" class="form-select" aria-label="Category">
-                                <option selected disabled>Choose your course</option>
-                                    <option value="1">HTML and CSS</option>
+                            <select id="selectCategory" class="form-select" aria-label="Category" required>
+                                <option value="" selected disabled>Choose your course</option>
+                                    <option value="1">HTML and CSS</option> <!--para o required funcionar, colocar value="" -->
                                     <option value="2">C#</option>
                                     <option value="3">Java</option>
                                     <option value="4">SQL</option>
@@ -61,20 +61,20 @@
                         <label for="email" class="col-sm-1 col-form-label text-end"></label>
                         <div class="col-sm-4">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioMorning">
-                                <label class="form-check-label" for="flexRadioMorning">
+                                <input class="form-check-input" type="radio" name="flexRadio" id="checkBoxMorning">
+                                <label class="form-check-label" for="checkBoxMorning">
                                   Morning
                                 </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioAfternoon">
-                                <label class="form-check-label" for="flexRadioAfternoon">
+                                <input class="form-check-input" type="radio" name="flexRadio" id="checkBoxAfternoon">
+                                <label class="form-check-label" for="checkBoxAfternoon">
                                   Afternoon
                                 </label>
                               </div>
                               <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadio" id="flexRadioNight" checked>
-                                <label class="form-check-label" for="flexRadioNight">
+                                <input class="form-check-input" type="radio" name="flexRadio" id="checkBoxNight">
+                                <label class="form-check-label" for="checkBoxNight">
                                   Night
                                 </label>
                               </div>
@@ -98,8 +98,8 @@
             Studants Registers:
         </div>
         <div class="row">
-            <div class="col-md-10 offset-md-1">
-                <table class="border border-warning table table-warning table-striped" id="studantsTable">
+            <div class="col-md-10 offset-md-1 ">
+                <table class="border border-warning table table-warning table-striped shadow p-3 mb-5 bg-body-tertiary rounded mt-3" id="studantsTable">
                     <thead>
                         <tr>
                           <th scope="col">#</th>

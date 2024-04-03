@@ -32,9 +32,9 @@ var studants = [
 ];
 
 var category = [
-    {id: 1, name: "morning"},
-    {id: 2, name: "afternoon"},
-    {id: 3, name: "night"}
+    { id: 1, name: "morning" },
+    { id: 2, name: "afternoon" },
+    { id: 3, name: "night" }
 ];
 
 //OnLoad
@@ -42,9 +42,28 @@ loadStudands();
 
 //Load all studants
 function loadStudands() {
-    for(let studant of studants) {
+    for (let studant of studants) {
         addNewRow(studant);
     }
+}
+
+// Save studants
+function save() {
+    var studant = {
+        id: studants.length + 1,
+        name: document.getElementById("inputName").value,
+        email: document.getElementById("inputEmail").value,
+        phoneNumber: document.getElementById("inputPhoneNumber").value,
+        course: document.getElementById("selectCategory").value,
+        morning: document.getElementById("checkBoxMorning").checked,
+        afternoon: document.getElementById("checkBoxAfternoon").checked,
+        night: document.getElementById("checkBoxNight").checked
+    };
+
+    addNewRow(studant); // Adiciona à tabela
+    studants.push(studant); // Adiciona ao array
+
+    document.getElementById("formRegister").reset();
 }
 
 //Add new row
@@ -74,18 +93,18 @@ function addNewRow(studant) {
 
     // insere o Period na tabela
     var options = ''; // começando em vazio 
-    if(studant.morning) {
+    if (studant.morning) {
         options = '<span class="badge bg-success">Morning</span>';
     }
 
-    if(studant.afternoon) {
+    if (studant.afternoon) {
         options = '<span class="badge bg-warning">Afternoon</span>';
     }
 
-    if(studant.night) {
+    if (studant.night) {
         options = '<span class="badge bg-primary">Night</span>';
     }
 
-    newRow.insertCell().innerHTML = options;
+    newRow.insertCell().innerHTML = options; // JAVASCRIPT NÂO FAZ SENTIDO
 
 }
