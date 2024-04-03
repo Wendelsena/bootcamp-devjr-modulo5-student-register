@@ -25,13 +25,13 @@
                     <div class="row mb-3 mt-3">
                         <label for="name" class="col-sm-1 col-form-label text-end"><img src="assets/do-utilizador.png" width="30" alt="people"></label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputName" placeholder="Name: ">
+                            <input id="name" type="text" class="form-control" id="inputName" placeholder="Name: ">
                         </div>
                     </div>
                     <div class="row mb-3 mt-3">
-                        <label for="email" class="col-sm-1 col-form-label text-end"><img src="assets/e-mail.png" width="30" alt="logo"></label>
+                        <label for="email" class="col-sm-1 col-form-label text-end"><img src="assets/e-mail.png" width="30" alt="email"></label>
                         <div class="col-sm-4">
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Email:">
+                            <input id="email" type="email" class="form-control" id="inputEmail" placeholder="Email:">
                         </div>
             
                             <label for="phone" class="col-sm-2 col-form-label text-end"><img src="assets/telefone.png" width="30" alt="phone"></label>
@@ -42,7 +42,7 @@
                     <div class="row mb-3 mt-5">
                         <label for="category" class="col-sm-1 col-form-label text-end"><img src="assets/categoria.png" width="30" alt="category"></label>
                         <div class="col-sm-4">
-                            <select class="form-select" aria-label="Category">
+                            <select id="category" class="form-select" aria-label="Category">
                                 <option selected disabled>Choose your course</option>
                                     <option value="1">HTML and CSS</option>
                                     <option value="2">C#</option>
@@ -97,6 +97,52 @@
         <div class="display-6">
             Studants Registers:
         </div>
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <table class="border border-warning table table-warning table-striped">
+                    <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Phone number</th>
+                          <th scope="col">Course</th>
+                          <th scope="col">Period</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>@mdo</td>
+                          <td><span class="badge text-bg-light">Morning</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                          <td>@mdo</td>
+                          <td><span class="badge text-bg-dark">Night</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td colspan="2">Larry the Bird</td>
+                          <td>@twitter</td>
+                          <td>@mdo</td>
+                          <td><span class="badge text-bg-secondary">Afternoon</span></td>
+                        </tr>
+                      </tbody>
+                  </table>
+            </div>
+        </div>
+
+          <br>
+          <br>
+          <br>
+
        </section> 
    </main>
    
