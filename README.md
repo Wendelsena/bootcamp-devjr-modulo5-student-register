@@ -1,9 +1,11 @@
 - ## Student Register
 
 #### Mobile 
-<img align="right" width="300" src="https://github.com/Wendelsena/bootcamp-devjr-modulo3-menu/blob/main/menuEx2.jpeg?raw=true">
-<img align="left" width="300" src="https://github.com/Wendelsena/bootcamp-devjr-modulo3-menu/blob/main/menuEx1.jpeg?raw=true">
+<img align="right" width="300" src="mobile1.jpeg">
+<img width="300" src="mobile2.jpeg">
 
 #### Desktop
-<img align="left" width="300" src="https://github.com/Wendelsena/bootcamp-devjr-modulo3-menu/blob/main/menuEx1.jpeg?raw=true">
+
+<img width="600" src="desktop.jpeg">
+
   
