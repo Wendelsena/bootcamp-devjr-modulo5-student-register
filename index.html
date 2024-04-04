@@ -21,7 +21,7 @@
 
         <div class="row">
             <div class="col-md-10 offset-1">
-                <form onsubmit="return false; save();" id="formRegister"> <!-- return false para não recarregar a pagina -->
+                <form onsubmit="save(); return false;" id="formRegister"> <!-- return false para não recarregar a pagina -->
                     <div class="row mb-3 mt-3">
                         <label for="name" class="col-sm-1 col-form-label text-end"><img src="assets/do-utilizador.png" width="30" alt="people"></label>
                         <div class="col-sm-10">
@@ -42,7 +42,7 @@
                     <div class="row mb-3 mt-5">
                         <label for="category" class="col-sm-1 col-form-label text-end"><img src="assets/categoria.png" width="30" alt="category"></label>
                         <div class="col-sm-4">
-                            <select id="selectCategory" class="form-select" aria-label="Category" required>
+                            <select id="category" class="form-select" aria-label="Category" required>
                                 <option value="" selected disabled>Choose your course</option>
                                     <option value="1">HTML and CSS</option> <!--para o required funcionar, colocar value="" -->
                                     <option value="2">C#</option>

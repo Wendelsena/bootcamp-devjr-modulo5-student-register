@@ -49,27 +49,29 @@ function loadStudands() {
 
 // Save studants
 function save() {
-    var studant = {
-        id: studants.length + 1,
-        name: document.getElementById("inputName").value,
-        email: document.getElementById("inputEmail").value,
-        phoneNumber: document.getElementById("inputPhoneNumber").value,
-        course: document.getElementById("selectCategory").value,
+    var student = {
+        id: studants.length + 1, // Calcula o id com base na entrada 
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phoneNumber: document.getElementById("phone").value,
+        course: document.getElementById("category").options[document.getElementById("category").selectedIndex].text, // para pegar o texto, não o numero da chamada
         morning: document.getElementById("checkBoxMorning").checked,
         afternoon: document.getElementById("checkBoxAfternoon").checked,
         night: document.getElementById("checkBoxNight").checked
     };
 
-    addNewRow(studant); // Adiciona à tabela
-    studants.push(studant); // Adiciona ao array
+    studants.push(student); // add estudante ao array
+
+    addNewRow(student); // add o estudante a linha
 
     document.getElementById("formRegister").reset();
 }
 
+
 //Add new row
 function addNewRow(studant) {
     var table = document.getElementById("studantsTable");
-    var newRow = table.insertRow(); // insere uma linha na tabela
+    var newRow = table.insertRow(-1); // Insere a nova linha no final da tabela
 
     // insere o Id na tabela
     var idNode = document.createTextNode(studant.id);
@@ -79,7 +81,7 @@ function addNewRow(studant) {
     var nameNode = document.createTextNode(studant.name);
     newRow.insertCell().appendChild(nameNode);
 
-    // insere o Email na tabele
+    // insere o Email na tabela
     var emailNode = document.createTextNode(studant.email);
     newRow.insertCell().appendChild(emailNode);
 
@@ -94,17 +96,16 @@ function addNewRow(studant) {
     // insere o Period na tabela
     var options = ''; // começando em vazio 
     if (studant.morning) {
-        options = '<span class="badge bg-success">Morning</span>';
+        options += '<span class="badge bg-success">Morning</span>';
     }
 
     if (studant.afternoon) {
-        options = '<span class="badge bg-warning">Afternoon</span>';
+        options += '<span class="badge bg-warning">Afternoon</span>';
     }
 
     if (studant.night) {
-        options = '<span class="badge bg-primary">Night</span>';
+        options += '<span class="badge bg-primary">Night</span>';
     }
 
-    newRow.insertCell().innerHTML = options; // JAVASCRIPT NÂO FAZ SENTIDO
-
+    newRow.insertCell().innerHTML = options; // Adiciona as opções ao final da linha
 }
