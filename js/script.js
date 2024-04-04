@@ -83,11 +83,15 @@ function addNewRow(studant) {
 
     // insere o Email na tabela
     var emailNode = document.createTextNode(studant.email);
-    newRow.insertCell().appendChild(emailNode);
+    var cell = newRow.insertCell();
+    cell.className='d-none d-md-table-cell';
+    cell.appendChild(emailNode);
 
     // insere o Phone number na tabela
     var phoneNumberNode = document.createTextNode(studant.phoneNumber);
-    newRow.insertCell().appendChild(phoneNumberNode);
+    var cell = newRow.insertCell();
+    cell.className='d-none d-md-table-cell';
+    cell.appendChild(phoneNumberNode);
 
     // insere o Course na tabela
     var courseNode = document.createTextNode(studant.course);
